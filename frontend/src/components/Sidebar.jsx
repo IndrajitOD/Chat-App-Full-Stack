@@ -38,7 +38,7 @@ const Sidebar = () => {
             />
             <span className="text-sm">Click to see online only</span>
           </label>
-          <span className="text-xs text-zinc-500">({onlineUsers.length - 1} active)</span>
+          <span className="text-xs text-zinc-500">({onlineUsers.length >= 1 ? onlineUsers.length - 1 : 0} active)</span>
         </div>
       </div>
 
