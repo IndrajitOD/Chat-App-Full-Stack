@@ -15,8 +15,8 @@ const ProfilePage = () => {
       return toast.error("Please select an image file");
     }
 
-    if (file.size > 10 * 1024 * 1024) {
-      return toast.error("File size must be less than 10MB");
+    if (file.size > 20 * 1024 * 1024) {
+      return toast.error("File size must be less than 20MB");
     }
 
     const reader = new FileReader();
