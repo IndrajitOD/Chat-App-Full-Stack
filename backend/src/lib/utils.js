@@ -15,7 +15,8 @@ export const generateToken = (userId, res) => {
     const isDev = !process.env.NODE_ENV || process.env.NODE_ENV.trim() === "development";
 
     if (!isDev) {
-        cookieOptions.sameSite = "strict";
+        // In production on separate domains (Render), we must use sameSite: "none" and secure: true
+        cookieOptions.sameSite = "none";
         cookieOptions.secure = true;
     } else {
         delete cookieOptions.sameSite;
